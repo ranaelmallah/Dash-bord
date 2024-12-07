@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Doto:wght@100..900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Prociono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Slabo+27px&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --secondry-color:  #00000064;
+    --text-color: #000000CC;
+    --hover-color:#153BFC;
+    --requred-color:#E03137;
+  }
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Manrope;
+}
+
+.page-body {
+    display: grid;
+    grid-template-columns: .1fr 1.8fr;
+    gap: 1;
+}
+
+/* start aside style */
+aside {
+    padding: 1rem;
+    margin: .4rem;
+}
+
+img.logo {
+    width: 40px;
+    height: 40px;
+    margin: 0px auto;
+}
+
+.search-icon {
+    margin: 1.5rem .5rem;
+    border-radius: 30px 0px 0px 0px;
+}
+
+aside .aside-section {
+    border-bottom: 1px solid var(--secondry-color);
+    width: 48px;
+    gap: 20px;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.aside-heading-text {
+    color:var(--text-color);
+    opacity: .5;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+}
+
+aside .aside-icon {
+    text-align: center;
+    color: var(--text-color);
+    line-height: 2rem;
+    width: 34px;
+    height: 34px;
+    gap: 5px;
+  
+}
+
+.aside-icon:hover,
+.search-icon:hover {
+    color:var(--hover-color);
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+.home-icon {
+    background-color: #153BFC1A;
+    width: 34px;
+    height: 34px;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+
+.home-icon svg {
+    color:var(--hover-color);
+}
+
+/* start navbar style */
+.main-body {
+    margin: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--secondry-color);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: .5rem;
+    position: relative;
+    font-family: Manrope;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #111827;
+}
+
+nav ul li:hover,
+a:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+
+}
+
+.fa-language {
+    font-size: 20px;
+}
+
+nav ul .inbox::after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--requred-color);
+    right: 0;
+    top: 0
+}
+
+.profile-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+}
+
+/* start cards section */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+section .card {
+    min-width: 200px;
+    top: 142px;
+    left: 453px;
+    padding: 2rem;
+    border-radius: 16px;
+    background-color: #DBE7FF;
+}
+
+section .card:hover {
+    color: #FAFAFA;
+    background-color: #a6aebd;
+}
+
+section .card p {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Manrope;
+    line-height: 1rem;
+}
+
+section .card h4 {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Manrope;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+/* form section  */
+.form-table-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4rem;
+}
+
+form {
+    margin-top: 3rem;
+    width: 500px;
+    padding-right: 2.5rem;
+    border-radius: 16px 0px 0px 0px;
+}
+
+form h2 {
+    margin-left: 1rem;
+}
+
+.input-feild {
+    width: 550px;
+    margin: 1rem;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: left;
+    display: flex;
+
+}
+
+label span {
+    font-size: 13px;
+    color: var(--requred-color);
+    margin: .1rem;
+
+}
+
+input,
+select {
+    width: 490px;
+    height: 60px;
+    padding: 1rem;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(211, 210, 210);
+}
+
+input:focus,
+select:focus {
+    border: 1px solid var(--secondry-color);
+    box-shadow: 0 0 5px var(--text-color);
+}
+
+.submit-container {
+    display: flex;
+    justify-content: end;
+
+}
+
+.submit {
+    width: 150px;
+    padding: 21px 24px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    background: #111827;
+    color: #FFFFFF;
+}
+.submit:hover{
+    background-color: var(--secondry-color);
+    cursor: pointer;
+}
+/* table style */
+
+table thead tr th {
+    background-color: #FAFAFA;
+    border-radius: 10px 0px 0px 10px;
+    padding: .7rem;
+}
+
+th p {
+    font-size: 14px;
+}
+
+tbody td {
+    width: 97px;
+    height: 19px;
+    font-size: 14px;
+    margin: 1rem;
+    border-bottom: 1px solid #A0AEC0;
+
+}
+
+
+.edit-btn,
+.delete-btn {
+    padding: .3rem .5rem;
+    border: none;
+
+}
+
+.edit-btn:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+    color: #DBE7FF;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    background-color: var(--requred-color);
+    color: #DBE7FF;
+}
+
+/* media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    .page-body {
+        grid-template-columns: 1fr 2r;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-table-section {
+        grid-template-columns: 1fr;
+    }
+
+    .submit-container {
+        justify-content: center;
+        margin: 1rem 0px;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-body {
+        grid-template-columns: 1fr ifr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .input-feild {
+        width: 100%;
+    }
+
+    input,
+    select {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+   
+    body {
+        padding: 0 1rem;
+    }
+
+    
+    aside {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside .aside-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    section .card {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    input,
+    select {
+        width: 100%;
+    }
+
+    .submit-container {
+        justify-content: center;
+    }
+
+    .submit {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    tbody td,
+    thead td {
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+}
